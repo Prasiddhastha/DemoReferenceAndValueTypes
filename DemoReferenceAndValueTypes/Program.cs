@@ -1,10 +1,8 @@
 ﻿using System;
+
 namespace DemoReferenceAndValueType
 {
-    public class Person
-    {
-        public int age =10;
-    }
+    
     class Program
     {   
       
@@ -23,26 +21,18 @@ namespace DemoReferenceAndValueType
             // another example
             //value type
             var num = 1;
-            Increment(num);
+            Person.Increment(num);
             Console.WriteLine(num);
 
 
             //reference type
             var person = new Person();
             person.age = 20;
-            MakeOld(person);
+            Person.MakeOld(person);
             Console.WriteLine(person.age);
 
 
         }
-        public static void Increment(int num)
-        {
-            num += 1;
-        }
-
-        public static void MakeOld(Person person )
-        {
-            person.age += 10;
-        }
+       
     }
 }
